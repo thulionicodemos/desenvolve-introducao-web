@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário: Pesquisa de satisfação</title>
+</head>
+<body>
+    <h1>Formulário: Pesquisa de satisfação</h1>
+
+    <form action="pagina_destino.html" method="POST">
+        <p>
+            <label for="nome">Nome:</label>
+            <input type="text" placeholder="Digite seu nome" id="nome">
+        </p>
+        <p>
+            <label for="email">E-mail:</label>
+            <input type="email" placeholder="Digite seu e-mail" id="email">
+        </p>
+        <p>
+            <label for="telefone">Telefone:</label>
+            <input type="number" placeholder="Digite seu n° de telefone" id="telefone">
+        </p>
+        <p>
+            <select name="cidade" id="cidade">
+                <option value="itabira">Itabira</option>
+                <option value="bh">Belo Horizonte</option>
+                <option value="bd">Bom Despacho</option>
+                <option value="stamaria">Santa Maria de Itabira</option>
+                <option value="nlima">Nova Lima</option>
+            </select>
+        </p>
+        <p>
+            <label for="p2">Qual foi o setor contactado?</label>
+            <div>
+                <input type="radio" id="suporte" name="setor">
+                <label for="suporte">Suporte Técnico</label>
+            </div>
+            <div>
+                <input type="radio" id="financeiro" name="setor">
+                <label for="financeiro">Financeiro</label>
+            </div>
+            <div>
+                <input type="radio" id="rh" name="setor">
+                <label for="rh">Recursos Humanos</label>
+            </div>
+        </p>
+        <p>
+            <label for="p3">Avalie o atendimento de 1 a 5, onde, 1 é Péssimo e 5 é Excelente:</label>
+            <div>
+                <input type="radio" id="opcao1" name="avalia-atendimento">
+                <label for="opcao1">1</label>
+                <input type="radio" id="opcao2" name="avalia-atendimento">
+                <label for="opcao2">2</label>
+                <input type="radio" id="opcao3"  name="avalia-atendimento">
+                <label for="opcao3">3</label>
+                <input type="radio" id="opcao4" name="avalia-atendimento">
+                <label for="opcao4">4</label>
+                <input type="radio" id="opcao5" name="avalia-atendimento">
+                <label for="opcao5">5</label>
+            </div>
+        </p>
+        <p>
+            <input type="checkbox" id="compartilha-info">
+            <label for="compartilha-info">Autorizo o compartilhamento da minha resposta com terceiros.</label>
+        </p>
+        <input type="submit">
+    </form>
+</body>
+</html>
