@@ -1,8 +1,12 @@
-html{
-    background:#39BFA7; /*cor de fundo*/
-    color: #0D2D8C; /*cor do texto*/
+/*  #C5D9D2 - cor de fundo
+    #2A383A - cor do texto
+    #8C0327 - cor de destaque */
+
+html {
+    background:#C5D9D2; /*cor de fundo*/
+    color: #2a383a; /*cor do texto*/
 }
 
-h3{
-    color: #F2E205; /*cor de destaque*/
+h3 {
+    color: #8C0327; /*cor de destaque*/
 }
