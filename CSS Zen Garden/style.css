@@ -238,3 +238,45 @@ a. Remova a ocorrência de borda duplicada entre as duas seções*/
 .participation h3 {
     align-self: center;
 }
+
+/*EXERCÍCIOS PSEUDO CLASSES*/
+
+/*5.1. Customize a aparência dos links da seguinte forma: 
+a. Por padrão, devem ter a cor de destaque e estarem em negrito.
+b. Se sobrepostos, devem ter sua cor alterada para uma tonalidade mais clara/escura. Os links visitados não devem ficar mais em negrito.
+
+5.2. Vamos dar um destaque a primeira letra do primeiro parágrafo da seção principal. Você deverá customizá-lo para que:
+a. Tenha tamanho de fonte 3 vezes maior que o padrão.
+b. Seja de uma fonte diferente da escolhida para o  site.
+c. Fique flutuando a esquerda.
+OBS: você precisará aplicar mais de um pseudo seletor para realizar essa estilização. Fique atento!
+
+5.3. Utilize bordas para criar um separador entre os itens presentes no menu de design. Aplique uma borda superior no topo de todos os itens de menu. Aplique uma borda inferior apenas no último item da lista*/
+
+a {
+    color: #8C0327;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #8c03275e;
+}
+
+a:visited{
+    font-weight: normal;
+}
+
+.main p:first-of-type::first-letter {
+    font-size: 3em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    float: left;
+    line-height: 1rem;
+}
+
+.design-selection ul li{
+    border-top: #2a383a solid 1px;
+}
+
+.design-selection ul li:last-child{
+    border-bottom: #2a383a solid 1px;
+}
