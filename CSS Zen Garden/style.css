@@ -1,3 +1,7 @@
+/*EXERCÍCIOS CSS ZEN GARDEN*/
+
+/*1 - Definir paleta de cores*/
+
 /*  #C5D9D2 - cor de fundo
     #2A383A - cor do texto
     #8C0327 - cor de destaque */
@@ -9,4 +13,60 @@ html {
 
 h3 {
     color: #8C0327; /*cor de destaque*/
+}
+
+/*EXERCÍCIOS ESTILIZAÇÃO TEXTUAL*/
+/*2 - Prática: Nesta atividade iremos personalizar o texto presente na página CSS Zen Garden: The Beauty of CSS Design.
+
+2.1. Aspectos gerais. Aplique os seguintes estilos na estrutura geral da página.
+a. Defina um tamanho fixo para a página inteira
+b. Defina uma fonte do tipo sans-serif para a página inteira
+c. Indente os parágrafos em 1em
+
+2.2. Títulos. Alinhe todos os títulos para o centro ou a direita.
+a. Defina o tamanho do h1 em 1.8rem
+b. Defina o tamanho do h2 em 1.4rem
+c. Defina o tamanho do h3 em 1.2rem
+
+2.3. Seções de resumo e principal. Localize os elementos que representam a seção de resumo e principal da página, e aplique nelas:
+a. Alinhamento a direita ou centralizado para a seção de resumo.
+b. Espaçamento entre as linhas de 1.5 para os parágrafos da seção principal.
+
+2.4. Abreviaturas. Customize todos as abreviaturas para que a fonte seja carregada em small-caps.*/
+
+html {
+    font-size: 20px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+p {
+    text-indent: 1em;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+.summary {
+    text-align: right;
+}
+
+.main p {
+    line-height: 1.5;
+}
+
+abbr {
+    font-variant: small-caps;
 }
