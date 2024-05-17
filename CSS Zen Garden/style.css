@@ -280,3 +280,59 @@ a:visited{
 .design-selection ul li:last-child{
     border-bottom: #2a383a solid 1px;
 }
+
+/*EXERCÍCIOS MEDIA QUERY*/
+
+/*6.Vamos deixar a nossa página do CSS Zen Garden responsiva a dispositivos móveis! Para isso iremos implementar as seguintes modificações.
+
+6.1. Crie uma media query para telas inferiores a 768 pixels; nós a utilizaremos como layout mobile.
+
+6.2. Realize as seguintes mudanças para o layout mobile:
+a. Remova o reposicionamento do menu de design para que ele se encaixe no mesmo lugar de antes.
+b. Remova a borda lateral ao lado da div
+c. Mude a orientação do Flexbox presente no elemento participation para vertical, e organize os elementos de forma empilhada
+d. Remova a altura fixa presente no cabeçalho da página
+e. Remova também o espaçamento inicial dado a cada um dos parágrafos*/
+
+@media screen and (max-width: 768px) {
+    #design-selection {
+        position: static;
+        width: 100%;
+    }
+
+    .explanation {
+        border-right: none;
+        width: 100%;
+    }
+
+    #zen-intro {
+        height: auto;
+    }
+
+    .participation {
+        flex-direction: column;
+    }
+
+    p {
+        text-indent: 0;
+    }
+}
+
+/*7. Vamos Deixar nossa página mais adequada a mídia de impressão também!
+
+7.1. Crie uma media query para meios impressos, mas sem qualquer tipo de restrição relacionada a tela
+
+7.2. Adicione as seguintes modificações a essa media query: 
+a. Altere o estilo da fonte para uma serifada, como times .
+b. Inverta as cores do banner para que o fundo fique claro (assim como o restante da página)*/
+
+@media print {
+    html {
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    #zen-intro header {
+        background-color: #C5D9D2 ;
+        color: #2a383a;
+    }
+}
