@@ -1,0 +1,130 @@
+/* Remove margens e preenchimentos padrão, define a fonte padrão para Arial, 
+   aplica box-sizing para incluir bordas e preenchimentos nas dimensões e define 
+   uma cor de fundo cinza claro para toda a página */
+   body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+
+/* Define um contêiner centralizado com largura máxima de 800px, 
+   ocupando 90% da largura da viewport com margens automáticas 
+   para centralizar horizontalmente e um preenchimento vertical */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Define a linha do tempo com posição relativa, 
+   padding vertical, fundo branco, bordas arredondadas e sombra suave */
+.timeline {
+    position: relative;
+    padding: 40px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Adiciona uma linha vertical centralizada para a linha do tempo */
+.timeline:before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #2766ae;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px; /* Compensa metade da largura da linha para centralizá-la */
+}
+
+/* Estiliza cada item da linha do tempo com display flex para alinhar conteúdo e ícone,
+   largura total, margem inferior e posição relativa */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Para itens pares, ajusta a ordem do conteúdo para que fique à direita e 
+   o ícone à esquerda */
+.timeline-item:nth-child(even) .timeline-content {
+    order: 1;
+    text-align: right;
+}
+.timeline-item:nth-child(even) .timeline-icon {
+    order: 2;
+}
+
+/* Para itens ímpares, ajusta a ordem do conteúdo para que fique à esquerda e 
+   o ícone à direita */
+.timeline-item:nth-child(odd) .timeline-content {
+    order: 2;
+    text-align: left;
+}
+.timeline-item:nth-child(odd) .timeline-icon {
+    order: 1;
+}
+
+/* Estiliza o ícone da linha do tempo com fundo verde, texto branco,
+   tamanho fixo, bordas arredondadas para ficar circular, centralização do texto,
+   posição absoluta na linha do tempo e z-index para ficar acima do conteúdo */
+.timeline-item .timeline-icon {
+    background-color: #2766ae;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -12.5px; /* Compensa metade da largura do ícone para centralizá-lo */
+}
+
+/* Estiliza o conteúdo da linha do tempo com fundo branco, preenchimento,
+   bordas arredondadas, sombra suave, largura calculada e z-index para sobrepor o ícone */
+.timeline-item .timeline-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 40px);
+    position: relative;
+}
+
+/* Ajusta a posição do conteúdo para itens ímpares para a direita da linha central */
+.timeline-item:nth-child(odd) .timeline-content {
+    left: calc(50% + 30px);
+}
+
+/* Ajusta a posição do conteúdo para itens pares para a esquerda da linha central */
+.timeline-item:nth-child(even) .timeline-content {
+    left: -30px;
+}
+
+/* Estiliza os títulos do conteúdo */
+.timeline-item .timeline-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+/* Estiliza os parágrafos do conteúdo */
+.timeline-item .timeline-content p {
+    margin: 5px 0;
+}
+
+/* Estiliza elementos span dentro do conteúdo, geralmente para datas ou detalhes adicionais */
+.timeline-item .timeline-content span {
+    display: block;
+    font-size: 14px;
+    color: #777;
+}
