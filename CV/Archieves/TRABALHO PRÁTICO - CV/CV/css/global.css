@@ -3,13 +3,13 @@
    uma cor de fundo cinza claro para toda a página */
 html, body {
     margin: 0;
-    padding: 0;
-    font-size: 20px;
+    padding: 2vh;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    background-color: #7ac3ff;
+    background-color: #ffffff;
 }
 
-html {
+/*html {
     max-width: 1280px;
-}
+}*/
