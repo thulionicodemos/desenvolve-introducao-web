@@ -1,0 +1,161 @@
+/* Define um contêiner centralizado com largura máxima de 800px, 
+   ocupando 90% da largura da viewport com margens automáticas 
+   para centralizar horizontalmente e um preenchimento vertical */
+.exptimeline-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2vh 0;
+}
+
+/* Define a linha do tempo com posição relativa, 
+   padding vertical, fundo branco, bordas arredondadas e sombra suave */
+.exptimeline {
+    position: relative;
+    padding-top: 2vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Adiciona uma linha vertical centralizada para a linha do tempo */
+.exptimeline:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #0c33b3;
+    top: calc(4vh + 44px);
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px; /* Compensa metade da largura da linha para centralizá-la */
+    margin-bottom: 10px;
+}
+
+/* Estiliza cada item da linha do tempo com display flex para alinhar conteúdo e ícone,
+   largura total, margem inferior e posição relativa */
+.exptimeline-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Para itens pares, ajusta a ordem do conteúdo para que fique à direita e 
+   o ícone à esquerda */
+.exptimeline-item:nth-child(even) .exptimeline-content {
+    order: 1;
+    text-align: right;
+}
+.exptimeline-item:nth-child(even) .exptimeline-icon {
+    order: 2;
+}
+
+/* Para itens ímpares, ajusta a ordem do conteúdo para que fique à esquerda e 
+   o ícone à direita */
+.exptimeline-item:nth-child(odd) .exptimeline-content {
+    order: 2;
+    text-align: left;
+}
+.exptimeline-item:nth-child(odd) .exptimeline-icon {
+    order: 1;
+}
+
+/* Estiliza o ícone da linha do tempo com fundo verde, texto branco,
+   tamanho fixo, bordas arredondadas para ficar circular, centralização do texto,
+   posição absoluta na linha do tempo e z-index para ficar acima do conteúdo */
+.exptimeline-item .exptimeline-icon {
+    background-color: #0c33b3;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px; /* Compensa metade da largura do ícone para centralizá-lo */
+}
+
+/* Estiliza o conteúdo da linha do tempo com fundo branco, preenchimento,
+   bordas arredondadas, sombra suave, largura calculada e z-index para sobrepor o ícone */
+.exptimeline-item .exptimeline-content {
+    background: #e2f6ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    width: calc(50% - 40px);
+    position: relative;
+}
+
+/* Ajusta a posição do conteúdo para itens ímpares para a direita da linha central */
+.exptimeline-item:nth-child(odd) .exptimeline-content {
+    left: calc(50% + 50px);
+}
+
+/* Ajusta a posição do conteúdo para itens pares para a esquerda da linha central */
+.exptimeline-item:nth-child(even) .exptimeline-content {
+    left: -50px;
+}
+
+/* Estiliza os títulos do conteúdo */
+.exptimeline-item .exptimeline-content h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Estiliza os subtítulos do conteúdo */
+.exptimeline-item .exptimeline-content h4 {
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+/* Estiliza os parágrafos do conteúdo */
+.exptimeline-item .exptimeline-content p {
+    font-size: 0.9rem;
+}
+
+/* Estiliza elementos span dentro do conteúdo, geralmente para datas ou detalhes adicionais */
+.exptimeline-item .exptimeline-content span {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    display: block;
+}
+
+/* Estiliza o título */
+.exptimeline h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+/* Media Queries para ajustar a responsividade */
+@media (max-width: 600px) {
+    .exptimeline:before {
+        top: 100%; /* Ajuste para telas menores */
+    }
+    
+    .exptimeline-item .exptimeline-content {
+        width: calc(100% - 80px); /* Ajusta a largura do conteúdo em telas menores */
+    }
+    
+    .exptimeline-item:nth-child(odd) .exptimeline-content, .exptimeline-item:nth-child(even) .exptimeline-content {
+        left: 50%;
+        transform: translateX(-50%); /* Centraliza o conteúdo em telas menores */
+    }
+
+    /* Estiliza os títulos e a data do conteúdo */
+    .exptimeline-item .exptimeline-content h3, h4, span {
+        text-align: center;
+    }
+
+    /*Estiliza os parágrafos do conteúdo*/
+    .exptimeline-item .exptimeline-content p{
+        text-align: justify;
+    }
+}

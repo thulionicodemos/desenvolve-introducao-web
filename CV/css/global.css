@@ -1,0 +1,12 @@
+/* Remove margens e preenchimentos padrão, define a fonte padrão para Arial, 
+   aplica box-sizing para incluir bordas e preenchimentos nas dimensões e define 
+   uma cor de fundo cinza claro para toda a página */
+html, body {
+    margin: 0;
+    padding: 2vh;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    scroll-padding-top: 60px; /* Ajusta o padding do topo para rolagem */
+}

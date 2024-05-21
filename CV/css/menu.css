@@ -1,0 +1,40 @@
+/* Classe para a barra de navegação */
+.navbar {
+    background-color: #333; /* Define a cor de fundo da barra de navegação como cinza escuro */
+    position: fixed;       /* Faz a barra de navegação ficar fixa no topo da página, mesmo quando se rola a página */
+    width: 100%;           /* Define a largura da barra de navegação para ocupar 100% da largura da janela */
+    top: 0;                /* Posiciona a barra de navegação no topo da página */
+    left: 0;               /* Alinha a barra de navegação à esquerda da janela */
+    z-index: 1000;         /* Define um índice z elevado para garantir que a barra de navegação fique acima de outros elementos na página */
+    height: 60px; /* Definimos uma altura fixa para a barra */
+}
+
+/* Estilos para a lista dentro da barra de navegação */
+.navbar ul {
+    list-style: none;      /* Remove os marcadores padrão da lista */
+    display: flex;         /* Usa o layout flexível para alinhar os itens da lista horizontalmente */
+    justify-content: center; /* Centraliza os itens da lista horizontalmente */
+}
+
+/* Estilos para cada item da lista na barra de navegação */
+.navbar ul li {
+    margin: 0;             /* Remove a margem ao redor dos itens da lista */
+}
+
+/* Estilos para os links dentro dos itens da lista na barra de navegação */
+.navbar ul li a {
+    display: block;        /* Define o link como um elemento de bloco para ocupar toda a área do item da lista */
+    color: white;          /* Define a cor do texto dos links como branca */
+    padding: 14px 20px;    /* Adiciona um preenchimento interno ao redor dos links para torná-los mais clicáveis */
+    text-decoration: none; /* Remove a sublinha padrão dos links */
+    text-align: center;    /* Centraliza o texto dos links */
+}
+
+/* Estilos para os links ao serem "hovered" (quando o usuário passa o mouse sobre eles) */
+.navbar ul li a:hover {
+    background-color: #111; /* Altera a cor de fundo dos links para um cinza ainda mais escuro ao passar o mouse sobre eles */
+}
+
+.apresentacao {
+    padding-top: 20px;
+}

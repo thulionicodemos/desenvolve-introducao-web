@@ -1,0 +1,70 @@
+.skills {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 15px); /* 50% da largura da tela menos a metade da largura total da margem entre os containers */
+    box-sizing: border-box; /* Inclui a largura e a altura da borda e do preenchimento na largura e altura total */
+    margin-top: 20px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 2vh;
+    height: 43vh;
+}
+
+.skill-item {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+.skill-bar {
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background-color: #e0e0e0; /* Cor de fundo da barra de progresso */
+    border-radius: 4px; /* Borda arredondada */
+    overflow: hidden; /* Oculta qualquer parte da barra de progresso que exceda a largura */
+}
+
+.skill-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1714ca; /* Cor da barra de progresso */
+    border-radius: 4px; /* Borda arredondada */
+    transition: width 0.5s ease; /* Transição suave para a largura da barra */
+    height: 100%; /* Altura igual à altura da seção "certifications" */
+}
+
+.skill-ratio-en {
+    width: 40%;
+}
+
+.skill-ratio-mso {
+    width: 90%;
+}
+
+.skill-ratio-html {
+    width: 50%;
+}
+
+.skill-ratio-nc {
+    width: 70%;
+}
+
+.skill-ratio-if {
+    width: 95%;
+}
+
+.skill-ratio-py {
+    width: 20%;
+}
+
+.skills h2 {
+    margin-top: 0;
+}
