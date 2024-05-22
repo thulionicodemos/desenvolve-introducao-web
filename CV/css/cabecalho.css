@@ -3,6 +3,7 @@ header {
     color: white;
     text-align: center;
     padding: 20px 0;
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -16,18 +17,19 @@ header p {
     font-size: 1.2em;
 }
 
-.profile {
-    margin-top: -50px;
+.foto-perfil {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.profile img {
+.foto-perfil img {
     border-radius: 50%;
     border: 5px solid white;
     width: 150px;
     height: 150px;
 }
 
-main {
+.texto-apresentacao .social {
     background: white;
     margin: 20px;
     padding: 20px;
@@ -38,32 +40,13 @@ main {
     text-align: center;
 }
 
-.social-media {
+.social {
     margin: 20px 0;
 }
 
-.social-media a {
+.social a {
     margin: 0 10px;
     text-decoration: none;
     color: #333;
     font-size: 1.5em;
-}
-
-.buttons {
-    margin-top: 20px;
-}
-
-.buttons button {
-    background-color: #00bfff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.buttons button:hover {
-    background-color: #008fcc;
 }

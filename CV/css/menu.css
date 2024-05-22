@@ -2,9 +2,10 @@
 .navbar {
     background-color: #333; /* Define a cor de fundo da barra de navegação como cinza escuro */
     position: fixed;       /* Faz a barra de navegação ficar fixa no topo da página, mesmo quando se rola a página */
-    width: 100%;           /* Define a largura da barra de navegação para ocupar 100% da largura da janela */
+    width: 100%;           /*Define a largura da barra de navegação para ocupar 100% da largura da janela*/
     top: 0;                /* Posiciona a barra de navegação no topo da página */
-    left: 0;               /* Alinha a barra de navegação à esquerda da janela */
+    /* right: 2%; */
+    margin-right: 2%;
     z-index: 1000;         /* Define um índice z elevado para garantir que a barra de navegação fique acima de outros elementos na página */
     height: 60px; /* Definimos uma altura fixa para a barra */
 }
@@ -33,8 +34,4 @@
 /* Estilos para os links ao serem "hovered" (quando o usuário passa o mouse sobre eles) */
 .navbar ul li a:hover {
     background-color: #111; /* Altera a cor de fundo dos links para um cinza ainda mais escuro ao passar o mouse sobre eles */
-}
-
-.apresentacao {
-    padding-top: 20px;
 }
