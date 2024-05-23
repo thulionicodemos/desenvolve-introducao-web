@@ -1,53 +1,45 @@
-/* Estilização da seção de educação */
 .education {
-    /*max-width: 800px; /* Define a largura máxima do container */
+    color: white;
     width: 100%;
-    margin: auto; /* Centraliza o container na página */
-    /*padding: 20px; /* Adiciona espaçamento interno */
+    margin: auto;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
-/* Estilização do título principal da seção */
 .education h2 {
-    text-align: center; /* Centraliza o texto */
-    margin-bottom: 20px; /* Adiciona espaçamento abaixo do título */
-    /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);*/
+    text-align: center;
     border-radius: 8px;
     padding-top: 2vh;
     padding-bottom: 2vh;
 }
 
-/* Estilização de cada artigo dentro da seção de educação */
 .education article {
-    background: #fff; /* Define a cor de fundo branca */
-    padding: 20px; /* Adiciona espaçamento interno */
-    margin-bottom: 20px; /* Adiciona espaçamento abaixo de cada artigo */
-    border-radius: 8px; /* Arredonda as bordas dos artigos */
-    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); /* Adiciona uma leve sombra */
-    /*box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);*/
+    background: #525259;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
-/* Estilização dos títulos dos artigos */
 .education article h3 {
     font-size: 1.2rem;
-    margin-top: 0; /* Remove a margem superior */
-    color: #007BFF; /* Define a cor azul para destaque */
+    margin-top: 0;
     text-align: center;
 }
 
-/* Estilização dos subtítulos dos artigos */
 .education article h4 {
+    color: #CFF250;
     font-size: 1rem;
-    margin: 10px 0; /* Adiciona espaçamento acima e abaixo do subtítulo */
-    color: #555; /* Define uma cor cinza para os subtítulos */
     text-align: center;
 }
 
-/* Estilização dos parágrafos dentro dos artigos */
 .education article p {
     font-size: 0.9rem;
-    margin: 0; /* Remove a margem padrão */
-    color: #777; /* Define uma cor cinza clara para os parágrafos */
+    margin: 0;
     text-align: center;
 }

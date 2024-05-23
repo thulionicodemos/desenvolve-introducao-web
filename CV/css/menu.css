@@ -1,37 +1,106 @@
-/* Classe para a barra de navegação */
 .navbar {
-    background-color: #333; /* Define a cor de fundo da barra de navegação como cinza escuro */
-    position: fixed;       /* Faz a barra de navegação ficar fixa no topo da página, mesmo quando se rola a página */
-    width: 100%;           /*Define a largura da barra de navegação para ocupar 100% da largura da janela*/
-    top: 0;                /* Posiciona a barra de navegação no topo da página */
-    /* right: 2%; */
-    margin-right: 2%;
-    z-index: 1000;         /* Define um índice z elevado para garantir que a barra de navegação fique acima de outros elementos na página */
-    height: 60px; /* Definimos uma altura fixa para a barra */
+    background-color: #CFF250;
+    /*Faz a barra de navegação ficar fixa no topo da página, mesmo quando se rola a página*/
+    position: fixed;
+    width: 100%;
+    /*Posiciona a barra de navegação no topo da página*/
+    top: 0;
+    /*Define um índice z elevado para garantir que a barra de navegação fique acima de outros elementos na página*/
+    z-index: 1000;
+    height: 75px;
 }
 
-/* Estilos para a lista dentro da barra de navegação */
 .navbar ul {
-    list-style: none;      /* Remove os marcadores padrão da lista */
-    display: flex;         /* Usa o layout flexível para alinhar os itens da lista horizontalmente */
-    justify-content: center; /* Centraliza os itens da lista horizontalmente */
+    /*Remove os marcadores padrão da lista*/
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
 }
 
-/* Estilos para cada item da lista na barra de navegação */
 .navbar ul li {
-    margin: 0;             /* Remove a margem ao redor dos itens da lista */
+    margin: 0;
 }
 
-/* Estilos para os links dentro dos itens da lista na barra de navegação */
 .navbar ul li a {
-    display: block;        /* Define o link como um elemento de bloco para ocupar toda a área do item da lista */
-    color: white;          /* Define a cor do texto dos links como branca */
-    padding: 14px 20px;    /* Adiciona um preenchimento interno ao redor dos links para torná-los mais clicáveis */
-    text-decoration: none; /* Remove a sublinha padrão dos links */
-    text-align: center;    /* Centraliza o texto dos links */
+    display: block;
+    color: #212226;
+    padding: 14px 10px;
+    /*Remove a sublinha padrão dos links*/
+    text-decoration: none; 
+    text-align: center;
+    border-radius: 8px;
 }
 
-/* Estilos para os links ao serem "hovered" (quando o usuário passa o mouse sobre eles) */
 .navbar ul li a:hover {
-    background-color: #111; /* Altera a cor de fundo dos links para um cinza ainda mais escuro ao passar o mouse sobre eles */
+    background-color: #212226;
+    color: #CFF250;
+}
+
+/*Menu toggle button*/
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #CFF250;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .navbar {
+        background-color: #212226;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        justify-content: center;
+        margin: 0;
+        transition: max-height 0.3s ease;
+        background-color: rgba(33, 34, 38, 0.9);
+        /*Posiciona o menu em relação ao seu contêiner pai (navbar)*/
+        position: absolute; 
+        top: 75px;
+        left: 0;
+        right: 0;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        padding: 14px 0;
+        color: #CFF250;
+    }
+
+    .navbar ul li a:hover {
+        background-color: #CFF250;
+        color: #212226;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar ul.open {
+        max-height: 246px;
+        background-color: #212226;
+    }
+
+    .main-content {
+        transition: transform 0.3s ease;
+        box-sizing: border-box;
+    }
+
+    .main-content.shifted {
+        transform: translateY(246px);
+    }
 }

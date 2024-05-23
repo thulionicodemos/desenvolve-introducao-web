@@ -1,9 +1,9 @@
 header {
-    background-color: #333;
+    background-color: #212226;
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 20px;
+    margin-top: 75px;
     width: 100%;
 }
 
@@ -23,6 +23,7 @@ header p {
 }
 
 .foto-perfil img {
+    /*Deixa a foto de perfil redonda e com borda sólida*/
     border-radius: 50%;
     border: 5px solid white;
     width: 150px;
@@ -30,23 +31,35 @@ header p {
 }
 
 .texto-apresentacao .social {
-    background: white;
+    background: #525259;
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 80%;
-    max-width: 800px;
     text-align: center;
 }
 
-.social {
+.texto-apresentacao p {
+    display: inline-block;
+    max-width: 800px;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     margin: 20px 0;
 }
 
-.social a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
-    font-size: 1.5em;
+.email {
+    margin-bottom: 10px;
+}
+
+/* Mobile */
+@media (max-width: 600px){
+    .texto-apresentacao p {
+        max-width: 500px;
+    }
 }
