@@ -1,13 +1,26 @@
-html, body {
-    margin: 0;
-    font-size: 14px;
-    font-family: "Titillium Web", sans-serif;
-    box-sizing: border-box;
-    background-color: #212226;
-    /* Ajusta o padding do topo para rolagem */
-    scroll-padding-top: 75px;
+html,
+body {
+	max-width: 1200px;
+	margin: auto;
+	font-size: 14px;
+	font-family: "Titillium Web", sans-serif;
+	box-sizing: border-box;
+	background-color: #212226;
+	/* Ajusta o padding do topo para rolagem */
+	scroll-padding-top: 75px;
 }
 
-h1, h2 {
-    font-family: "Rajdhani", sans-serif;
+header {
+	max-width: none;
+}
+
+h1,
+h2 {
+	font-family: "Rajdhani", sans-serif;
+}
+
+@media (max-width: 576px) {
+	body {
+		padding: 20px;
+	}
 }

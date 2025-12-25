@@ -1,25 +1,26 @@
 .footer {
-    background-color: #CFF250;
-    color: #212226;
-    clear: both;
-    text-align: center;
+	background-color: #cff250;
+	color: #212226;
+	clear: both;
+	text-align: center;
+	width: 100%;
 }
 
 .social {
-    margin: 20px 0;
+	margin: 20px 0;
 }
 
 .social a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #212226;
-    font-size: 1.5em;
+	margin: 0 10px;
+	text-decoration: none;
+	color: #212226;
+	font-size: 1.5em;
 }
 
 .footer h2 {
-    padding-top: 2vh;
+	padding-top: 2vh;
 }
 
 .footer p {
-    text-align: left;
+	text-align: left;
 }

@@ -1,106 +1,112 @@
 .navbar {
-    background-color: #CFF250;
-    /*Faz a barra de navegação ficar fixa no topo da página, mesmo quando se rola a página*/
-    position: fixed;
-    width: 100%;
-    /*Posiciona a barra de navegação no topo da página*/
-    top: 0;
-    /*Define um índice z elevado para garantir que a barra de navegação fique acima de outros elementos na página*/
-    z-index: 1000;
-    height: 75px;
+	background-color: #cff250;
+	/*Faz a barra de navegação ficar fixa no topo da página, mesmo quando se rola a página*/
+	position: fixed;
+	max-width: 1200px;
+	width: 100%;
+	/*Posiciona a barra de navegação no topo da página*/
+	top: 0;
+	/*Define um índice z elevado para garantir que a barra de navegação fique acima de outros elementos na página*/
+	z-index: 1000;
+	height: 75px;
 }
 
 .navbar ul {
-    /*Remove os marcadores padrão da lista*/
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
+	/*Remove os marcadores padrão da lista*/
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	padding: 0;
 }
 
 .navbar ul li {
-    margin: 0;
+	margin: 0;
 }
 
 .navbar ul li a {
-    display: block;
-    color: #212226;
-    padding: 14px 10px;
-    /*Remove a sublinha padrão dos links*/
-    text-decoration: none; 
-    text-align: center;
-    border-radius: 8px;
+	display: block;
+	color: #212226;
+	padding: 14px 10px;
+	/*Remove a sublinha padrão dos links*/
+	text-decoration: none;
+	text-align: center;
+	border-radius: 8px;
 }
 
 .navbar ul li a:hover {
-    background-color: #212226;
-    color: #CFF250;
+	background-color: #212226;
+	color: #cff250;
 }
 
 /*Menu toggle button*/
 .menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #CFF250;
+	display: none;
+	font-size: 24px;
+	cursor: pointer;
+	color: #cff250;
 }
 
 /* Mobile */
-@media (max-width: 600px) {
-    .navbar {
-        background-color: #212226;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
+@media (max-width: 576px) {
+}
 
-    .navbar ul {
-        flex-direction: column;
-        overflow: hidden;
-        max-height: 0;
-        justify-content: center;
-        margin: 0;
-        transition: max-height 0.3s ease;
-        background-color: rgba(33, 34, 38, 0.9);
-        /*Posiciona o menu em relação ao seu contêiner pai (navbar)*/
-        position: absolute; 
-        top: 75px;
-        left: 0;
-        right: 0;
-    }
+/* Mobile */
+@media (max-width: 768px) {
+	.navbar {
+		background-color: #212226;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
 
-    .navbar ul li {
-        width: 100%;
-        text-align: center;
-    }
+	.navbar ul {
+		flex-direction: column;
+		overflow: hidden;
+		max-height: 0;
+		justify-content: center;
+		margin: 0;
+		transition: max-height 0.3s ease;
+		background-color: rgba(33, 34, 38, 0.9);
+		/*Posiciona o menu em relação ao seu contêiner pai (navbar)*/
+		position: absolute;
+		top: 75px;
+		left: 0;
+		right: 0;
+	}
 
-    .navbar ul li a {
-        padding: 14px 0;
-        color: #CFF250;
-    }
+	.navbar ul li {
+		width: 100%;
+		/* left: 21.563px; */
+		/* text-align: center; */
+	}
+	
+	.navbar ul li a {
+		padding: 14px 0;
+		color: #cff250;
+	}
 
-    .navbar ul li a:hover {
-        background-color: #CFF250;
-        color: #212226;
-    }
+	.navbar ul li a:hover {
+		background-color: #cff250;
+		color: #212226;
+	}
 
-    .menu-toggle {
-        display: block;
-    }
+	.menu-toggle {
+		display: block;
+	}
 
-    .navbar ul.open {
-        max-height: 246px;
-        background-color: #212226;
-    }
+	.navbar ul.open {
+		max-height: 274px;
+		background-color: #212226;
+	}
 
-    .main-content {
-        transition: transform 0.3s ease;
-        box-sizing: border-box;
-    }
+	.main-content {
+		transition: transform 0.3s ease;
+		box-sizing: border-box;
+	}
 
-    .main-content.shifted {
-        transform: translateY(246px);
-    }
+	.main-content.shifted {
+		transform: translateY(274px);
+	}
 }

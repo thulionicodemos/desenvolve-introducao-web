@@ -1,45 +1,55 @@
 .education {
-    color: white;
-    width: 100%;
-    margin: auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+	color: white;
+	width: 100%;
+	margin: auto;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 .education h2 {
-    text-align: center;
-    border-radius: 8px;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+	text-align: center;
+	border-radius: 8px;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
 }
 
 .education article {
-    background: #525259;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-    max-width: 500px;
-    margin: auto;
-    margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	background: #525259;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+	max-width: 500px;
+	margin: auto;
+	margin-bottom: 20px;
 }
 
 .education article h3 {
-    font-size: 1.2rem;
-    margin-top: 0;
-    text-align: center;
+	font-size: 1.35rem;
+	margin-top: 0;
+	text-align: center;
 }
 
 .education article h4 {
-    color: #CFF250;
-    font-size: 1rem;
-    text-align: center;
+	color: #cff250;
+	font-size: 1.2rem;
+	text-align: center;
 }
 
 .education article p {
-    font-size: 0.9rem;
-    margin: 0;
-    text-align: center;
+	font-size: 0.9rem;
+	margin: 0;
+	text-align: center;
+}
+
+.education article ul {
+	padding: 0 20px 0 20px;
+}
+
+.education article li {
+	text-align: justify;
 }

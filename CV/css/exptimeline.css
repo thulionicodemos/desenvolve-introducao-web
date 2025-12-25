@@ -1,147 +1,154 @@
 /*Define um contêiner centralizado com largura máxima de 800px, 
    ocupando 90% da largura da viewport*/
 .exptimeline-container {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2vh 0;
+	width: 90%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2vh 0;
 }
 
 .exptimeline {
-    color: white;
-    position: relative;
-    padding-top: 2vh;
-    padding-left: 8%;
-    padding-right: 8%;
-    background-color: #212226;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+	color: white;
+	position: relative;
+	padding-top: 2vh;
+	padding-left: 8%;
+	padding-right: 8%;
+	background-color: #212226;
+	border-radius: 8px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
 /*Adiciona uma linha vertical centralizada para a linha do tempo*/
 .exptimeline:before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: #CFF250;
-    top: calc(4vh + 44px);
-    bottom: 0;
-    left: 50%;
-    /*Compensa metade da largura da linha para centralizá-la*/
-    margin-left: -2px; 
-    margin-bottom: 10px;
+	content: "";
+	position: absolute;
+	width: 4px;
+	background-color: #cff250;
+	top: calc(4vh + 44px);
+	bottom: 0;
+	left: 50%;
+	/*Compensa metade da largura da linha para centralizá-la*/
+	margin-left: -2px;
+	margin-bottom: 10px;
 }
 
 .exptimeline-item {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	position: relative;
+	margin-bottom: 30px;
 }
 
 /*Para itens pares, ajusta a ordem do conteúdo para que fique à direita e 
    o ícone à esquerda*/
 .exptimeline-item:nth-child(even) .exptimeline-content {
-    order: 1;
-    text-align: right;
+	order: 1;
+	text-align: right;
 }
 .exptimeline-item:nth-child(even) .exptimeline-icon {
-    order: 2;
+	order: 2;
 }
 
 /*Para itens ímpares, ajusta a ordem do conteúdo para que fique à esquerda e 
    o ícone à direita*/
 .exptimeline-item:nth-child(odd) .exptimeline-content {
-    order: 2;
-    text-align: left;
+	order: 2;
+	text-align: left;
 }
 .exptimeline-item:nth-child(odd) .exptimeline-icon {
-    order: 1;
+	order: 1;
 }
 
 .exptimeline-item .exptimeline-icon {
-    background-color: #CFF250;
-    color: #212226;
-    font-weight: bold;
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    /*Compensa metade da largura do ícone para centralizá-lo*/
-    margin-left: -25px;
+	background-color: #cff250;
+	color: #212226;
+	font-weight: bold;
+	font-size: 0.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	/*Compensa metade da largura do ícone para centralizá-lo*/
+	margin-left: -25px;
 }
 
 .exptimeline-item .exptimeline-content {
-    background: #525259;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    width: calc(50% - 40px);
-    position: relative;
+	background: #525259;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+	width: calc(50% - 40px);
+	position: relative;
 }
 
 /*Ajusta a posição do conteúdo para itens ímpares para a direita da linha central*/
 .exptimeline-item:nth-child(odd) .exptimeline-content {
-    left: calc(50% + 50px);
+	left: calc(50% + 50px);
 }
 
 /*Ajusta a posição do conteúdo para itens pares para a esquerda da linha central*/
 .exptimeline-item:nth-child(even) .exptimeline-content {
-    left: -50px;
+	left: -50px;
 }
 
 .exptimeline-item .exptimeline-content h3 {
-    margin-top: 10px;
-    font-size: 1.2rem;
+	margin-top: 10px;
+	font-size: 1.2rem;
 }
 
 .exptimeline-item .exptimeline-content h4 {
-    margin: 20px 0;
-    font-size: 1rem;
-}
-
-.exptimeline-item .exptimeline-content p {
-    font-size: 0.9rem;
+	margin: 20px 0;
+	font-size: 1rem;
 }
 
 .exptimeline-item .exptimeline-content span {
-    margin-bottom: 20px;
-    font-size: 0.9rem;
-    display: block;
+	margin-bottom: 20px;
+	font-size: 0.9rem;
+	display: block;
 }
 
 .exptimeline h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 0;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+
+.exptimeline-container ul {
+	padding: 0 0 0 20px;
+}
+
+.exptimeline-container li {
+	text-align: justify;
 }
 
 /* Mobile */
-@media (max-width: 600px) {
-    .exptimeline:before {
-        top: 100%;
-    }
-    
-    .exptimeline-item .exptimeline-content {
-        width: calc(100% - 80px);
-    }
-    
-    .exptimeline-item:nth-child(odd) .exptimeline-content, .exptimeline-item:nth-child(even) .exptimeline-content {
-        left: 50%;
-        transform: translateX(-50%);
-    }
+@media (max-width: 768px) {
+	.exptimeline:before {
+		top: 100%;
+	}
 
-    .exptimeline-item .exptimeline-content h3, h4, span {
-        text-align: center;
-    }
+	.exptimeline-item .exptimeline-content {
+		width: calc(100% - 80px);
+	}
 
-    .exptimeline-item .exptimeline-content p{
-        text-align: justify;
-    }
+	.exptimeline-item:nth-child(odd) .exptimeline-content,
+	.exptimeline-item:nth-child(even) .exptimeline-content {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.exptimeline-item .exptimeline-content h3,
+	h4,
+	span {
+		text-align: center;
+	}
+
+	.exptimeline-item .exptimeline-content p {
+		text-align: justify;
+	}
 }

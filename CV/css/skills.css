@@ -1,89 +1,94 @@
 .skills {
-    color: white;
-    display: inline-block;
-    vertical-align: top;
-    /*50% da largura da tela menos a metade da largura total da margem entre os containers*/
-    width: calc(50% - 14px); 
-    box-sizing: border-box;
-    margin-top: 20px;
-    position: relative;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    padding: 2vh;
-    height: 72vh;
+	color: white;
+	display: inline-block;
+	vertical-align: top;
+	/*50% da largura da tela menos a metade da largura total da margem entre os containers*/
+	width: calc(50% - 14px);
+	box-sizing: border-box;
+	margin-top: 20px;
+	position: relative;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+	padding: 2vh;
+	height: auto;
 }
 
 .skill-item {
-    position: relative;
-    margin-bottom: 10px;
+	position: relative;
+	margin-bottom: 10px;
 }
 
 .skill-name {
-    position: relative;
-    z-index: 1;
-    display: block;
-    text-align: left;
+	position: relative;
+	z-index: 1;
+	display: block;
+	text-align: left;
 }
 
 .skill-bar {
-    position: relative;
-    height: 10px;
-    width: 100%;
-    background-color: #525259;
-    border-radius: 4px;
-    /*Oculta qualquer parte da barra de progresso que exceda a largura*/
-    overflow: hidden;
+	position: relative;
+	height: 10px;
+	width: 100%;
+	background-color: #525259;
+	border-radius: 4px;
+	/*Oculta qualquer parte da barra de progresso que exceda a largura*/
+	overflow: hidden;
 }
 
 .skill-progress {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #CFF250;
-    border-radius: 4px;
-    /*Transição suave para a largura da barra*/
-    transition: width 0.5s ease; 
-    height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #cff250;
+	border-radius: 4px;
+	/*Transição suave para a largura da barra*/
+	transition: width 0.5s ease;
+	height: 100%;
 }
 
 .skill-ratio-en {
-    width: 40%;
+	width: 60%;
 }
 
 .skill-ratio-mso {
-    width: 90%;
+	width: 90%;
 }
 
 .skill-ratio-html {
-    width: 50%;
+	width: 70%;
 }
 
 .skill-ratio-nc {
-    width: 70%;
+	width: 70%;
 }
 
 .skill-ratio-if {
-    width: 95%;
+	width: 95%;
 }
 
 .skill-ratio-py {
-    width: 20%;
+	width: 50%;
 }
 
 .skills h2 {
-    margin-top: 0;
-    text-align: center;
+	margin-top: 0;
+	text-align: center;
 }
 
 .skills ul {
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 }
 
 /* Mobile */
-@media (max-width: 600px){
-    .skills {
-        width: 100%;
-        height: auto;
-    }
+@media (max-width: 576px) {
+	.skills {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-width: 768px) {
+}
+@media (max-width: 992px) {
 }
